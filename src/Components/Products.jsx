@@ -41,16 +41,14 @@ function Products() {
     },
   ];
 
-  const videos= ['src\assets\Arqitel project video 4_3.webm','src\assets\Cula_promo_new_4_3.mp4','src\assets\webflow-education-promo.mp4','src\assets\TTR project video 4_3_H.264.webm','src\assets\Maniv-Compressed.mp4']
+  const videos= ['src/assets/Arqitel project video 4_3.webm','src/assets/Cula_promo_new_4_3.mp4','src/assets/webflow-education-promo.mp4','src/assets/TTR project video 4_3_H.264.webm','src/assets/Maniv-Compressed.mp4']
 
   const [pos, setPos] = useState(0);
   const [videoIndex,setVideoIndex] =useState(0)
   const move=(val)=>{
-    console.log(videos[val])
     setVideoIndex(val)
     setPos(18*val)
   }
-
   return (
     <div className="mt-36 relative">
       {products.map((product, index) => (
@@ -63,9 +61,8 @@ function Products() {
           transition={{ease:[0.76,0,0.24,1],duration:0.5}}
           className={`window absolute h-[19.5rem] w-[26rem] bg-sky-200 left-[45%] rounded-lg overflow-hidden`}
         >
-        <video src='src\assets\Arqitel project video 4_3.webm' autoPlay muted loop className="fit-contain bg-zinc-300 w-full h-full absolute"></video>
+        <video src={videos[videoIndex]||'src/assets/Arqitel project video 4_3.webm'} type='video/webp+mp4' autoPlay muted loop className="fit-contain bg-zinc-300 w-full h-full absolute"></video>
         </motion.div>
-        
       </div>
     </div>
   );

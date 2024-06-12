@@ -3,9 +3,9 @@ import Card from './Card'
 
 function Cards() {
   return (
-    <div className='flex gap-1 max-w-screen-xl  mx-auto justify-center'>
-      <Card width={'basis-1/3'} project={false} hover={false}/>
-      <Card width={'basis-2/3'} project={true} hover={true}/>
+    <div className='flex gap-1 max-w-screen-xl w-[90%]  mx-auto justify-center'>
+      <Card width={'33%'} project={false} hover={false}/>
+      <Card width={'67%'} project={true} hover={true}/>
     </div>
   )
 }
